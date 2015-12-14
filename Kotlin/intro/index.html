@@ -158,7 +158,7 @@ fun main(args: Array<String>) {
 }
 
 fun String.capitiliseSecondChar() = this.toCharArray()
-	.mapIndexed { i, c -> if (i==1) c.toUpperCase() else c}
+	.mapIndexed {i, c -> if (i==1) c.toUpperCase() else c}
 	.toNewString()
 
 fun List&#60;Char&#62;.toNewString() = String(this.toCharArray())
@@ -202,6 +202,51 @@ fun Double.times(bd:BigDecimal) = BigDecimal(this) * bd
 					- Need to extend Double as there is no Double * BigDecimal
 				</section>
 
+
+				<section data-markdown>
+					## Integration with Java libraries
+
+					- Strong compatibility
+					- Maven, add Kotlin plugin and kotlin-stdlib dependancy
+				</section>
+
+				<section data-markdown>
+					## Kovenant
+
+					- Asynchronous library
+					```
+async { "world" } and async { "Hello" } success {
+    println("${it.second} ${it.first}!")
+}
+					```
+				</section>
+
+				<section data-markdown>
+					## funKTionale
+
+					- Functional library
+					 - Currying
+					 - Option
+				</section>
+
+				<section data-markdown>
+					## Quasar
+
+					- Fibers and Actors
+					 - Less overhead than using Threads
+					 - Can create millions of them
+					 - Actors isolate issues
+					 - Actor model is resiliant
+				</section>
+
+				<section data-markdown>
+					## Standard Libary almost complete
+
+					- 1.0 Beta 3 - as of last week
+					- 1.0 Final is expected in January or February
+
+				</section>
+
 				<section data-markdown>
 					## IDE Support
 
@@ -216,10 +261,6 @@ fun Double.times(bd:BigDecimal) = BigDecimal(this) * bd
 					## More Information
 
 					- https://kotlinlang.org/docs/reference/
-
-					__
-					### Sign up for Kotlin Manchester
-					- http://www.meetup.com/Kotlin-Manchester/
 				</section>
 
 			</div>
